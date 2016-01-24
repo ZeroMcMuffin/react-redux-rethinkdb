@@ -36,6 +36,7 @@ defmodule ReactRethinkdb.Mixfile do
      {:phoenix_html, "~> 2.3"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
+     {:rethinkdb, "~> 0.2.2 "},
      {:cowboy, "~> 1.0"}]
   end
 

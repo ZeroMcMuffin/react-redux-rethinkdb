@@ -26,7 +26,8 @@ module.exports = {
       constants: 'constants',
       components: 'components',
       reducers: 'reducers',
-      store: 'store'
+      store: 'store',
+      utils: 'utils'
     },
     extensions: ['', '.js', '.jsx']
   }

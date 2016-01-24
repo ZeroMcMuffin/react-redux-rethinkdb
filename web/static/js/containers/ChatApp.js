@@ -4,6 +4,9 @@ import { bindActionCreators } from 'redux';
 import Conversation from 'components/Conversation';
 import ChatInput from 'components/ChatInput';
 import * as ChatActions from 'actions/ChatActions';
+//import Socket from 'utils/Socket';
+
+
 
 class ChatApp extends Component {
   render() {

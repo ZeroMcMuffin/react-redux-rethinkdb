@@ -10,9 +10,8 @@ defmodule ReactRethinkdb do
       # Start the endpoint when the application starts
       supervisor(ReactRethinkdb.Endpoint, []),
       # Start the Ecto repository
-      supervisor(ReactRethinkdb.Repo, []),
+      supervisor(ReactRethinkdb.DatabaseSupervisor, []),
       # Here you could define other workers and supervisors as children
-      # worker(ReactRethinkdb.Worker, [arg1, arg2, arg3]),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

@@ -2,7 +2,7 @@ defmodule ReactRethinkdb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "rooms:*", ReactRethinkdb.RoomChannel
+  channel "rooms:*", ReactRethinkdb.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
