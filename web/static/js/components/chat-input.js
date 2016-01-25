@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import ChatTextInput from 'components/ChatTextInput';
+import ChatTextInput from 'components/chat-text-input';
 
 export default class ChatInput extends Component {
   static propTypes = {

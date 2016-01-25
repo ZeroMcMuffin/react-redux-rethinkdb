@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import ChatApp from './ChatApp';
+import ChatApp from './chat-app';
 
 export default class Root extends Component {
   render() {
