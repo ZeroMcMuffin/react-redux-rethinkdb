@@ -17,6 +17,7 @@
   * [Install Elixir](http://elixir-lang.org/install.html)
   * [Install Phoenix](http://www.phoenixframework.org/docs/installation)
   * [Install RethinkDB](https://www.rethinkdb.com/docs/install/) 
+  * [Install Node.js](https://nodejs.org/en/download/)
 
 ## Starting the Server
   * With the RethinkDB daemon running, execute the db setup script `node db-setup.js`
