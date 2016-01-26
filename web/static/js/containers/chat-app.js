@@ -1,43 +1,41 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import SignIn from 'components/sign-in';
 import Conversation from 'components/conversation';
 import ChatInput from 'components/chat-input';
 import * as ChatActions from 'actions/chat-actions';
-import JoinChannel from 'utils/join-channel';
-
 
 class ChatApp extends Component {
 
-  constructor(props, context) {
-    super(props, context);
-    registerCallbacks(props.actions);
-  }
-
   render() {
     const { chat, actions } = this.props;
+    const chatPane = (chat.connected)
+      ? renderChat (chat, actions)
+      : <div className="form-group">
+          <label>Name</label>
+          <ChatInput placeholder="Enter Name" onSubmit={actions.connect} />
+        </div>;
+
     return (
-      <div>
-        <Conversation messages={chat.messages} />
-        <ChatInput onSendMessage={actions.sendMessage} />
+      <div className="col-md-6">
+        Status: {chat.connected ? 'Connected as ' + chat.name  : 'Offline'}
+        {chatPane}
       </div>
     );
   }
 }
 
-const registerCallbacks = ({initialMessages, receiveMessages}) => {
-  let channel = JoinChannel("chat:lobby");
-  channel.on("initial_messages", messages => { // Inflate the messages
-    initialMessages(messages.data);
-  });
-
-  channel.on("new_messages", messages => {  // Add new messages
-    receiveMessages(messages.data);
-  });
+const renderChat = (chat, actions) =>  {
+  return (
+    <div className="form-group">
+      <Conversation messages={chat.messages} />
+      <ChatInput onSubmit={actions.sendMessage} />
+    </div>
+  );
 };
 
 function mapState(state) {
-
   return {
     chat: state.chat
   };

@@ -3,7 +3,8 @@ import classnames from 'classnames';
 
 export default class ChatTextInput extends Component {
   static propTypes = {
-    onSubmit: PropTypes.func.isRequired
+    onSubmit: PropTypes.func.isRequired,
+    placeholder: PropTypes.string
   };
 
   constructor(props, context) {
@@ -25,6 +26,7 @@ export default class ChatTextInput extends Component {
     return (
       <input type='text'
              autoFocus='true'
+             placeholder={this.props.placeholder}
              onChange={::this.handleChange}
              onKeyDown={::this.handleSubmit} />
     );

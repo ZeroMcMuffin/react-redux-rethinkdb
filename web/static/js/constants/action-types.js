@@ -1,3 +1,4 @@
+export const CONNECT = 'CONNECT';
 export const SEND_MESSAGE = 'SEND_MESSAGE';
 export const RECEIVE_MESSAGES = 'RECEIVE_MESSAGES';
 export const INITIAL_MESSAGES = 'INITIAL_MESSAGES';

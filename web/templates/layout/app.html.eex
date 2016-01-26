@@ -8,13 +8,14 @@
     <meta name="author" content="">
 
     <title>Hello ReactRethinkdb!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
     <div class="container">
       <header class="header">
-        <h1>Chat App</h1>
+        <h1><i class="fa fa-weixin"></i> Chat App </h1>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>

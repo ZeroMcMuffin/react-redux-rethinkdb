@@ -5,7 +5,6 @@ import DevTools from './dev-tools';
 
 export default class Root extends Component {
   render() {
-    console.log(this.props);
     const { store } = this.props;
     return (
       <Provider store={store}>

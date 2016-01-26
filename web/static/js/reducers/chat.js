@@ -1,7 +1,9 @@
-import { SEND_MESSAGE, RECEIVE_MESSAGES, INITIAL_MESSAGES } from 'constants/action-types';
+import { CONNECT, SEND_MESSAGE, RECEIVE_MESSAGES, INITIAL_MESSAGES } from 'constants/action-types';
 
 const initialState = {
-  messages: []
+  connected: false,
+  messages: [],
+  name: null
 };
 
 export default function chat(state = initialState, action) {
@@ -30,7 +32,16 @@ export default function chat(state = initialState, action) {
         }
       );
       break;
-
+    case CONNECT:
+      return Object.assign(
+        {},
+        state,
+        {
+          name: action.name,
+          connected: true
+        }
+      );
+      break;
     default:
       return state;
   }

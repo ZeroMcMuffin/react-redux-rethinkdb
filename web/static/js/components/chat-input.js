@@ -3,7 +3,8 @@ import ChatTextInput from 'components/chat-text-input';
 
 export default class ChatInput extends Component {
   static propTypes = {
-    onSendMessage: PropTypes.func.isRequired
+    onSubmit: PropTypes.func.isRequired,
+    placeholder: PropTypes.string
   };
 
   constructor(props, context) {
@@ -11,13 +12,13 @@ export default class ChatInput extends Component {
   }
 
   handleSubmit(text) {
-    this.props.onSendMessage(text);
+    this.props.onSubmit(text);
   }
 
   render() {
     return (
       <div>
-        <ChatTextInput onSubmit={::this.handleSubmit} />
+        <ChatTextInput placeholder={this.props.placeholder} onSubmit={::this.handleSubmit} />
       </div>
     );
   }
