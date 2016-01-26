@@ -16,9 +16,7 @@
 ## Dependencies
   * [Install Elixir](http://elixir-lang.org/install.html)
   * [Install Phoenix](http://www.phoenixframework.org/docs/installation)
-  * [Install RethinkDB](https://www.rethinkdb.com/docs/install/) and create a database called 'chat' with a single table of 'messages'.
-    With some more time, I'll automate the database and table creation, but the daemon will need to be run
-    in either scenario.
+  * [Install RethinkDB](https://www.rethinkdb.com/docs/install/) 
 
 ## Starting the Server
   * With the RethinkDB daemon running, execute the db setup script `node db-setup.js`
