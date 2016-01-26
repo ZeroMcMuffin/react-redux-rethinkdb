@@ -18,12 +18,14 @@
     "babel-preset-es2015-loose": "^7.0.0",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
+    "css-loader": "^0.23.1",
     "phoenix": "file:deps/phoenix",
     "phoenix_html": "file:deps/phoenix_html",
     "redux-devtools": "^3.0.1",
     "redux-devtools-dock-monitor": "^1.0.1",
     "redux-devtools-log-monitor": "^1.0.2",
     "rethinkdb": "^2.2.1",
+    "style-loader": "^0.13.0",
     "webpack": "^1.12.12"
   },
   "dependencies": {

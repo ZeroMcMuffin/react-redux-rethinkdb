@@ -19,15 +19,15 @@ module.exports = {
     }]
   },
   resolve: {
-    root: path.resolve(__dirname) + '/web/static/js/',
+    root: path.resolve(__dirname) + '/web/static/',
     alias: {
-      containers: 'containers',
-      actions: 'actions',
-      constants: 'constants',
-      components: 'components',
-      reducers: 'reducers',
-      store: 'store',
-      utils: 'utils'
+      containers: 'js/containers',
+      actions: 'js/actions',
+      constants: 'js/constants',
+      components: 'js/components',
+      reducers: 'js/reducers',
+      store: 'js/store',
+      utils: 'js/utils'
     },
     extensions: ['', '.js', '.jsx']
   }

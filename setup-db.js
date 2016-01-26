@@ -20,6 +20,7 @@ r.connect(config).then(function(conn){
   console.log('Table created!');
   process.exit(0);
 }).error(function(err){
-   console.error("Error creating rethink db ", err);
+  console.error("Error creating rethink db ", err);
+  process.exit(1);
 });
 
