@@ -14,13 +14,11 @@ export function connect(name) {
     channel.on( "new_messages", messages => {  // Add new messages
       dispatch( {type: types.RECEIVE_MESSAGES, messages: messages.data} );
     });
-    let message = {text: "test", created: Date.now()};
-    channel.push("new_message", {body: message});
   }
 }
 
-export function sendMessage(text) {
-  let message = {text, created: Date.now()};
+export function sendMessage(name, text) {
+  let message = {text, name, created: Date.now()};
   channel.push("new_message", {body: message});
   return {
     type: types.SEND_MESSAGE,

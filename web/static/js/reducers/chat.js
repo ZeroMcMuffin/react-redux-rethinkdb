@@ -25,12 +25,7 @@ export default function chat(state = initialState, action) {
       );
       break;
     case SEND_MESSAGE:
-      return Object.assign({},
-        state,
-        {
-          messages: [...state.messages, {id: null, text: action.text}]
-        }
-      );
+      return state;
       break;
     case CONNECT:
       return Object.assign(

@@ -1,36 +1,50 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import SignIn from 'components/sign-in';
 import Conversation from 'components/conversation';
-import ChatInput from 'components/chat-input';
+import Input from 'components/text-input';
 import * as ChatActions from 'actions/chat-actions';
 
 class ChatApp extends Component {
 
   render() {
     const { chat, actions } = this.props;
+    const status = (chat.connected) ? 'Connected as ' + chat.name  : 'Offline';
     const chatPane = (chat.connected)
-      ? renderChat (chat, actions)
-      : <div className="form-group">
-          <label>Name</label>
-          <ChatInput placeholder="Enter Name" onSubmit={actions.connect} />
-        </div>;
+      ? renderChat(chat.messages, chat.name, ::this.handleSubmit)
+      : renderLogin(actions.connect);
 
     return (
       <div className="col-md-6">
-        Status: {chat.connected ? 'Connected as ' + chat.name  : 'Offline'}
+        <div>
+          {status}
+        </div>
         {chatPane}
       </div>
     );
   }
+
+  handleSubmit(value) {
+    const { chat, actions } = this.props;
+    actions.sendMessage(chat.name, value);
+  }
 }
 
-const renderChat = (chat, actions) =>  {
+const renderLogin = (connectAction) => {
   return (
     <div className="form-group">
-      <Conversation messages={chat.messages} />
-      <ChatInput onSubmit={actions.sendMessage} />
+        <label htmlFor="login" className="control-label">Login
+          <Input id="login" placeholder="Enter Name" onSubmit={connectAction} />
+        </label>
+    </div>
+  );
+};
+
+const renderChat = (messages, name, handleSubmit) =>  {
+  return (
+    <div className="form-group">
+      <Conversation name={name} messages={messages} />
+      <Input placeholder="Send a message" onSubmit={handleSubmit} />
     </div>
   );
 };
