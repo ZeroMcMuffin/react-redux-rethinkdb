@@ -1,7 +1,7 @@
 # React, Redux, Elixir, Phoenix, RethinkDB Demo
 ## Chat Example
 
-  This is a tech demo for using several technologies that I'm interested in.  The stack
+  This is a tech demo for several technologies that I'm interested in.  The stack
   currently includes React, Redux, Elixir, Phoenix, and RethinkDB.  
   
 ## Where is Angular 2?
