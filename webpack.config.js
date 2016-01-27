@@ -16,6 +16,9 @@ module.exports = {
       query: {
         presets: ['es2015-loose', 'react', 'stage-0']
       }
+    }, {
+      test: /\.css$/, // Only .css files
+      loader: 'style!css' // Run both loaders
     }]
   },
   resolve: {
@@ -27,6 +30,7 @@ module.exports = {
       components: 'js/components',
       reducers: 'js/reducers',
       store: 'js/store',
+      css: 'css',
       utils: 'js/utils'
     },
     extensions: ['', '.js', '.jsx']
