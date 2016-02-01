@@ -1,17 +1,5 @@
 # React, Redux, Elixir, Phoenix, RethinkDB Demo
 ## Chat Example
-
-  This is a tech demo for several technologies that I'm interested in.  The stack
-  currently includes React, Redux, Elixir, Phoenix, and RethinkDB.  
-  
-## Where is Angular 2?
-  This started out as an Angular 2 application and was well on its way to completion when I got stuck.  The solution 
-  seemed to lie in switching to JSPM, though I'm not sure why.  Time was ticking.  After learning more
-  tools than I care to mention related to modules and asset management...I decided to go back to React with the
-  hope that the additional productivity from a tool I know would make up for the lack of expertise I have with
-  Phoenix, Elixir, and RethinkDB.  This was a fairly ambitious effort given my lack of familiarity with some of the 
-  key components and only having a few days to complete it.
-  
  
 ## Dependencies
   * [Install Elixir](http://elixir-lang.org/install.html)
