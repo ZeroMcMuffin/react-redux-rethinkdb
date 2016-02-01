@@ -1,5 +1,8 @@
-# React, Redux, Elixir, Phoenix, RethinkDB Demo
-## Chat Example
+# React, Redux, Elixir, Phoenix, RethinkDB Chat Demo
+
+If one were to attempt to name this stack, the best they might do would be something like PE3R (pear) or PERRR (purr).  If one were to do such a thing...
+
+This is example is incredibily shallow and only represents most of the wiring you might use to get these pieces to work together.  If you have suggestions for improving things, I'm all ears!
  
 ## Dependencies
   * [Install Elixir](http://elixir-lang.org/install.html)
